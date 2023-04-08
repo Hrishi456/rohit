@@ -1,19 +1,20 @@
 pipeline {
     agent any
+
     stages {
-        stage('---clean---') {
+        stage('One') {
             steps {
-                sh "/opt/maven/bin/mvn clean"
+                echo 'Hello welcome to pipeline demo'
             }
         }
-        stage('--test--') {
+        stage('Two') {
             steps {
-                sh "/opt/maven/bin/mvn test"
+                echo 'Sample Testing Stage 2'
             }
         }
-        stage('--package--') {
+        stage('Three') {
             steps {
-                sh "/opt/maven/bin/mvn package"
+                echo 'Thanks for using Jenkins'
             }
         }
     }
